@@ -1,11 +1,12 @@
-postfixgld Cookbook
+Postfix GLD Cookbook
 ===================
-Installs and configures the postfix grey listing daemon.
+Installs and configures the postfix grey listing daemon (GLD).
 
 Requirements
 ------------
 #### packages
 
+- `chef/rewind`
 - `mysql`
 - `database`
 
@@ -61,6 +62,8 @@ Attributes
 
 Usage
 -----
+
+include_recipe "postfixgld"
 
 
 Contributing
