@@ -1,6 +1,6 @@
 postfixgld Cookbook
 ===================
-Installs and configures the postfix greylisting deamon.
+Installs and configures the postfix grey listing daemon.
 
 Requirements
 ------------
@@ -24,12 +24,42 @@ e.g.
     <th>Description</th>
     <th>Default</th>
   </tr>
+
   <tr>
-    <td><tt>['postfixgld']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['postfixgld']['mysql']['user']</tt></td>
+    <td>String</td>
+    <td>Database user to add</td>
+    <td><tt>gld</tt></td>
   </tr>
+
+  <tr>
+      <td><tt>['postfixgld']['mysql']['password']</tt></td>
+      <td>String</td>
+      <td>Database users password</td>
+      <td><tt>gld</tt></td>
+    </tr>
+
+     <tr>
+      <td><tt>['postfixgld']['mysql']['host']</tt></td>
+      <td>String</td>
+      <td>Database host</td>
+      <td><tt>localhost</tt></td>
+    </tr>
+
+
+     <tr>
+      <td><tt>['postfixgld']['mysql']['db']</tt></td>
+      <td>String</td>
+      <td>Database name</td>
+      <td><tt>gld</tt></td>
+    </tr>
+
+     <tr>
+      <td><tt>['postfixgld']['mxgrey']</tt></td>
+      <td>Integer</td>
+      <td>Set >0 to use the mxgrey algorithm</td>
+      <td><tt>0</tt></td>
+    </tr>
 </table>
 
 Usage
