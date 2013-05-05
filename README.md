@@ -13,10 +13,7 @@ Requirements
 
 Attributes
 ----------
-TODO: List you cookbook attributes here.
 
-e.g.
-#### postfixgld::default
 <table>
   <tr>
     <th>Key</th>

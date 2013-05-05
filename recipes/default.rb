@@ -16,6 +16,10 @@
 # limitations under the License.
 #
 
+chef_gem "chef-rewind"
+require 'chef/rewind'
+
+
 include_recipe "mysql::server"
 include_recipe "database"
 
@@ -78,4 +82,10 @@ template "/etc/gld.conf" do
   notifies :restart, "service[gld]"
 end
 
+
+rewind "template[/etc/postfix/main.cf]" do
+  cookbook "postfixgld"
+  source "postfix/main.cf.erb"
+  notifies :restart, "service[postfix]"
+end
 

@@ -22,3 +22,6 @@ default['postfixgld']['mysql']['host'] = 'localhost'
 default['postfixgld']['mysql']['db'] = 'gld'
 
 default['postfixgld']['mxgrey'] = 0
+
+# Postfix additional attributes
+default['postfix']['smtpd_recipient_restrictions'] = ['check_policy_service inet:127.0.0.1:2525']
